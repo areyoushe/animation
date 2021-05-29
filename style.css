@@ -1,0 +1,52 @@
+body{
+    text-align: center;
+}
+#rightwheel,#leftwheel{
+    animation:rotatewheel 2s linear infinite ;
+    transform-box: fill-box;
+    transform-origin: center ;
+}
+@keyframes rotatewheel{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes back {
+    from{ transform :translateX(40px);
+
+    }
+    to{
+        transform: translateX(-40px);
+    }
+}
+
+#background {
+    animation: back 1s ease infinite alternate;
+}
+ @keyframes bounce{
+     from{
+         transform:rotateX(0deg);
+     }
+     to{
+         transform:rotateX(20deg);
+     }
+ }
+#biker{
+    animation: bounce 2s ease infinite alternate;
+    transform-origin:bottom ;
+}
+
+@keyframes jump{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(20deg);
+    }
+}
+#hat{
+    animation: jump 1s ease infinite alternate;
+}
